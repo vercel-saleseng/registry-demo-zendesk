@@ -3,19 +3,11 @@
 import type * as React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import {
-  Home,
-  FlaskConical,
-  LayoutDashboard,
-  Terminal,
-  MonitorPlay,
-  Library,
-} from "lucide-react";
+import { Home, LayoutDashboard, Library } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -24,9 +16,6 @@ import {
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
-  SidebarSeparator,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
 
@@ -37,13 +26,6 @@ interface NavItem {
   badge?: {
     text: string;
   };
-}
-
-interface UsageItem {
-  label: string;
-  value: string;
-  percentage?: number;
-  variant?: "default" | "success" | "warning";
 }
 
 interface SidebarProps {
@@ -83,7 +65,7 @@ export function InternalSidebar({
       <SidebarHeader>
         <header className="px-2 py-4 flex items-center">
           <h1 className="text-xl font-bold text-[var(--zds-text-stronger)]">
-            Fluent
+            Zendesk Garden
           </h1>
         </header>
       </SidebarHeader>

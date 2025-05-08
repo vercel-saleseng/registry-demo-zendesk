@@ -13,12 +13,12 @@ const getV0Url = (path: "start" | "dashboard") => {
     `https://registry-demo-microsoft.vercel.app/r/${path}.json`,
   );
   const title = encodeURIComponent(
-    `Fluent ${path.charAt(0).toUpperCase() + path.slice(1)}`,
+    `Zendesk Garden ${path.charAt(0).toUpperCase() + path.slice(1)}`,
   );
 
   const prompt = encodeURIComponent(
     `A complete ${path} implementation with sidebar, stats cards, charts, and tables.
-  Use the Fluent UI webLightTheme with components imported from @fluentui/react-components before using shadcn/ui.`,
+  Use the Zendesk Garden with components imported from @zendeskgarden/react-* before using shadcn/ui.`,
   );
 
   const v0Url = `https://v0.dev/chat/api/open?title=${title}&prompt=${prompt}&url=${registryUrl}`;
@@ -38,7 +38,8 @@ export default function Home() {
                     Starting Kit
                   </CardTitle>
                   <CardDescription>
-                    Opens a blank app with the Fluent theme preconfigured.
+                    Opens a blank app with the Zendesk Garden theme
+                    preconfigured.
                   </CardDescription>
                 </div>
                 <a href={getV0Url("start")} target="_blank" rel="noreferrer">

@@ -1,14 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "registry demo",
+  "name": "Zendesk Registry Demo",
   "homepage": "",
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "start",
       "type": "registry:theme",
-      "title": "Fluent Starting Kit",
-      "description": "A blank app with the Fluent theme preconfigured.",
+      "title": "Zendesk Garden Starting Kit",
+      "description": "A blank app with the Zendesk Garden theme preconfigured.",
       "files": [
         {
           "path": "tailwind.config.ts",
@@ -21,7 +21,7 @@
           "target": "app/globals.css"
         },
         {
-          "path": "app/(fluent)/layout.tsx",
+          "path": "app/(garden)/layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -34,11 +34,11 @@
       "title": "Dashboard",
       "description": "A complete dashboard implementation with sidebar, stats cards, charts, and tables.",
       "registryDependencies": [
-        "https://registry-demo-microsoft.vercel.app/r/start.json"
+        "https://registry-demo-zendesk.vercel.app/r/start.json"
       ],
       "files": [
         {
-          "path": "app/(fluent)/dashboard/page.tsx",
+          "path": "app/(garden)/dashboard/page.tsx",
           "type": "registry:file",
           "target": "app/dashboard/page.tsx"
         }
