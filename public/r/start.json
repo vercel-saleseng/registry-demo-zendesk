@@ -7,19 +7,19 @@
   "files": [
     {
       "path": "tailwind.config.ts",
-      "content": "import type { Config } from \"tailwindcss\";\n\nconst config: Config = {\n  content: [\n    \"./pages/**/*.{js,ts,jsx,tsx,mdx}\",\n    \"./components/**/*.{js,ts,jsx,tsx,mdx}\",\n    \"./app/**/*.{js,ts,jsx,tsx,mdx}\",\n    \"*.{js,ts,jsx,tsx,mdx}\",\n  ],\n  plugins: [require(\"@zendeskgarden/tailwindcss\")],\n};\nexport default config;\n",
+      "content": "import type { Config } from \"tailwindcss\";\n\nconst config: Config = {\n  content: [\n    \"./pages/**/*.{js,ts,jsx,tsx,mdx}\",\n    \"./components/**/*.{js,ts,jsx,tsx,mdx}\",\n    \"./app/**/*.{js,ts,jsx,tsx,mdx}\",\n    \"*.{js,ts,jsx,tsx,mdx}\",\n  ],\n};\n\nexport default config;\n",
       "type": "registry:file",
       "target": "tailwind.config.ts"
     },
     {
       "path": "app/globals.css",
-      "content": "\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n",
+      "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n",
       "type": "registry:file",
       "target": "app/globals.css"
     },
     {
       "path": "app/(garden)/layout.tsx",
-      "content": "\"use client\";\n\nimport type React from \"react\";\nimport \"@/app/globals.css\";\nimport { ThemeProvider } from \"@zendeskgarden/react-theming\";\nimport { Noto_Sans } from \"next/font/google\";\n\nconst notoSans = Noto_Sans({ subsets: [\"latin\"] });\n\nexport default function Layout({ children }: { children: React.ReactNode }) {\n  return (\n    <html lang=\"en\">\n      <body className={notoSans.className}>\n        <ThemeProvider>\n          <main className=\"flex justify-center w-full\">{children}</main>\n        </ThemeProvider>\n      </body>\n    </html>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport type React from \"react\";\nimport \"@/app/globals.css\";\nimport { ThemeProvider, DEFAULT_THEME } from \"@zendeskgarden/react-theming\";\nimport { Noto_Sans } from \"next/font/google\";\n\nconst notoSans = Noto_Sans({ subsets: [\"latin\"] });\n\nexport default function Layout({ children }: { children: React.ReactNode }) {\n  return (\n    <html lang=\"en\">\n      <body className={notoSans.className}>\n        <ThemeProvider theme={DEFAULT_THEME}>\n          <main className=\"flex justify-center w-full\">{children}</main>\n        </ThemeProvider>\n      </body>\n    </html>\n  );\n}\n",
       "type": "registry:file",
       "target": "app/layout.tsx"
     }
