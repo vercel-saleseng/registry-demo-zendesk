@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* SharePoint blue theme colors */
+    --background: 0 0% 98%;
+    --foreground: 210 12% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 12% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 12% 16%;
+    --primary: 206 100% 40%; /* SharePoint blue #0078D4 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 204 33% 97%; /* Light gray background #F5F8FA */
+    --secondary-foreground: 210 12% 16%;
+    --muted: 210 10% 96%;
+    --muted-foreground: 210 12% 60%;
+    --accent: 180 46% 36%; /* Teal action buttons #1B7F79 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 78.90% 57.25%;
+    --destructive-foreground: 0 0% 94.90%;
+    --border: 210 16% 93%;
+    --input: 210 16% 93%;
+    --ring: 206 100% 40%;
+
+    /* Chart colors */
+    --chart-1: 206 100% 40%; /* SharePoint blue */
+    --chart-2: 180 46% 36%; /* Teal */
+    --chart-3: 199 98% 39%; /* Light blue */
+    --chart-4: 210 12% 40%; /* Dark gray */
+    --chart-5: 45 100% 50%; /* Gold */
+
+    /* Sidebar colors */
+    --sidebar: 0 0% 98%;
+    --sidebar-foreground: 210 12% 16%;
+    --sidebar-primary: 206 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 46% 36%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 16% 93%;
+    --sidebar-ring: 206 100% 40%;
+
+    /* Font settings */
+    --font-sans: "Segoe UI", system-ui, sans-serif;
+    --font-serif: Georgia, serif;
+    --font-mono: "Consolas", monospace;
+    --radius: 0.25rem;
+
+    /* Shadow settings */
+    --shadow-2xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .dark {
+    --background: 210 30% 10%;
+    --foreground: 0 0% 98%;
+    --card: 210 30% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 30% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 206 100% 40%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 30% 20%;
+    --muted-foreground: 210 10% 70%;
+    --accent: 180 46% 36%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --ring: 206 100% 40%;
+
+    /* Chart colors for dark mode */
+    --chart-1: 206 100% 50%;
+    --chart-2: 180 46% 46%;
+    --chart-3: 199 98% 49%;
+    --chart-4: 210 12% 70%;
+    --chart-5: 45 100% 60%;
+
+    /* Sidebar colors for dark mode */
+    --sidebar: 210 30% 15%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 206 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 180 46% 46%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 30% 25%;
+    --sidebar-ring: 206 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  }
+}
+

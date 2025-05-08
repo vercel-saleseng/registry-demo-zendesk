@@ -1,0 +1,48 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "registry demo",
+  "homepage": "",
+  "items": [
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "start",
+      "type": "registry:theme",
+      "title": "Fluent Starting Kit",
+      "description": "A blank app with the Fluent theme preconfigured.",
+      "files": [
+        {
+          "path": "tailwind.config.ts",
+          "type": "registry:file",
+          "target": "tailwind.config.ts"
+        },
+        {
+          "path": "app/globals.css",
+          "type": "registry:file",
+          "target": "app/globals.css"
+        },
+        {
+          "path": "app/(fluent)/layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "dashboard",
+      "type": "registry:component",
+      "title": "Dashboard",
+      "description": "A complete dashboard implementation with sidebar, stats cards, charts, and tables.",
+      "registryDependencies": [
+        "https://registry-demo-microsoft.vercel.app/r/start.json"
+      ],
+      "files": [
+        {
+          "path": "app/(fluent)/dashboard/page.tsx",
+          "type": "registry:file",
+          "target": "app/dashboard/page.tsx"
+        }
+      ]
+    }
+  ]
+}
