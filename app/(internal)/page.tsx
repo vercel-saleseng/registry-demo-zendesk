@@ -17,8 +17,8 @@ const getV0Url = (path: "start" | "dashboard") => {
   );
 
   const prompt = encodeURIComponent(
-    `A complete ${path} implementation with sidebar, stats cards, charts, and tables.
-  Use the Zendesk Garden with components imported from @zendeskgarden/react-* before using shadcn/ui.`,
+    `A ${path} implementation with Zendesk Garden preloaded.
+  Use the Zendesk Garden with components imported from @zendeskgarden/react-* before using shadcn/ui. Use lucide-react for icons.`,
   );
 
   const v0Url = `https://v0.dev/chat/api/open?title=${title}&prompt=${prompt}&url=${registryUrl}`;

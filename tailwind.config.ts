@@ -7,6 +7,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
-  plugins: [require("@zendeskgarden/tailwindcss")],
 };
+
 export default config;
