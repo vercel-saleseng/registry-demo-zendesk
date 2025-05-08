@@ -10,7 +10,7 @@ import {
 
 const getV0Url = (path: "start" | "dashboard") => {
   const registryUrl = encodeURIComponent(
-    `https://registry-demo-microsoft.vercel.app/r/${path}.json`,
+    `https://registry-demo-zendesk.vercel.app/r/${path}.json`,
   );
   const title = encodeURIComponent(
     `Zendesk Garden ${path.charAt(0).toUpperCase() + path.slice(1)}`,
